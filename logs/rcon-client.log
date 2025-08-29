@@ -1,0 +1,354 @@
+2025-07-31 14:26:42.163 [main] INFO  com.example.Main - Starting Java RCON Project
+2025-07-31 14:26:42.170 [main] INFO  com.example.Main - Configuration loaded successfully
+2025-07-31 14:40:18.113 [main] INFO  com.example.Main - Starting Java RCON Project
+2025-07-31 14:40:18.120 [main] INFO  com.example.Main - Configuration loaded successfully
+2025-07-31 14:43:45.120 [main] INFO  com.example.Main - Starting Java RCON Project
+2025-07-31 14:43:45.129 [main] INFO  com.example.Main - Configuration loaded successfully
+2025-07-31 14:44:23.598 [main] INFO  com.example.Main - Starting Java RCON Project
+2025-07-31 14:44:23.613 [main] INFO  com.example.Main - Configuration loaded successfully
+2025-07-31 14:45:40.862 [main] INFO  com.example.Main - Starting Java RCON Project
+2025-07-31 14:45:40.864 [main] INFO  com.example.Main - Configuration loaded successfully
+2025-07-31 14:46:20.564 [main] INFO  com.example.Main - Starting Java RCON Project
+2025-07-31 14:46:20.573 [main] INFO  com.example.Main - Configuration loaded successfully
+2025-07-31 14:46:42.178 [main] INFO  com.example.Main - Starting Java RCON Project
+2025-07-31 14:46:42.187 [main] INFO  com.example.Main - Configuration loaded successfully
+2025-07-31 14:49:40.491 [main] INFO  com.example.Main - Starting Java RCON Project
+2025-07-31 14:49:40.499 [main] INFO  com.example.Main - Configuration loaded successfully
+2025-07-31 14:49:40.589 [main] INFO  com.example.RconClient - Connected to RCON server voidrunner.zapto.org:25575
+2025-07-31 14:49:40.597 [main] DEBUG com.example.RconClient - Reading packet of size: 10
+2025-07-31 14:49:40.600 [main] INFO  com.example.RconClient - Successfully authenticated with RCON server
+2025-07-31 14:49:40.601 [main] INFO  com.example.Main - Successfully connected to server
+2025-07-31 14:49:40.604 [main] DEBUG com.example.RconClient - Reading packet of size: 76
+2025-07-31 14:49:40.641 [main] DEBUG com.example.RconClient - Reading packet of size: 75
+2025-07-31 14:49:40.644 [main] DEBUG com.example.RconClient - Reading packet of size: 73
+2025-07-31 14:49:40.649 [main] INFO  com.example.RconClient - Disconnected from RCON server
+2025-07-31 14:49:40.649 [main] INFO  com.example.Main - Disconnected from server
+2025-07-31 14:50:30.216 [main] INFO  com.example.Main - Starting Java RCON Project
+2025-07-31 14:50:30.224 [main] INFO  com.example.Main - Configuration loaded successfully
+2025-07-31 14:50:30.321 [main] INFO  com.example.RconClient - Connected to RCON server voidrunner.zapto.org:25575
+2025-07-31 14:50:30.325 [main] DEBUG com.example.RconClient - Reading packet of size: 10
+2025-07-31 14:50:30.330 [main] INFO  com.example.RconClient - Successfully authenticated with RCON server
+2025-07-31 14:50:30.330 [main] INFO  com.example.Main - Successfully connected to server
+2025-07-31 14:50:30.338 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:50:30.375 [main] DEBUG com.example.RconClient - Reading packet of size: 3687
+2025-07-31 14:50:30.391 [main] DEBUG com.example.RconClient - Reading packet of size: 186
+2025-07-31 14:50:30.404 [main] DEBUG com.example.RconClient - Reading packet of size: 10
+2025-07-31 14:50:30.407 [main] INFO  com.example.RconClient - Disconnected from RCON server
+2025-07-31 14:50:30.407 [main] INFO  com.example.Main - Disconnected from server
+2025-07-31 14:51:03.702 [main] INFO  com.example.Main - Starting Java RCON Project
+2025-07-31 14:51:03.710 [main] INFO  com.example.Main - Configuration loaded successfully
+2025-07-31 14:51:03.865 [main] INFO  com.example.RconClient - Connected to RCON server voidrunner.zapto.org:25575
+2025-07-31 14:51:03.872 [main] DEBUG com.example.RconClient - Reading packet of size: 10
+2025-07-31 14:51:03.876 [main] INFO  com.example.RconClient - Successfully authenticated with RCON server
+2025-07-31 14:51:03.878 [main] INFO  com.example.Main - Successfully connected to server
+2025-07-31 14:51:03.881 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:51:03.894 [main] DEBUG com.example.RconClient - Reading packet of size: 3687
+2025-07-31 14:51:03.896 [main] DEBUG com.example.RconClient - Reading packet of size: 186
+2025-07-31 14:51:03.911 [main] DEBUG com.example.RconClient - Reading packet of size: 10
+2025-07-31 14:51:03.915 [main] INFO  com.example.RconClient - Disconnected from RCON server
+2025-07-31 14:51:03.915 [main] INFO  com.example.Main - Disconnected from server
+2025-07-31 14:53:08.634 [main] INFO  com.example.Main - Starting Java RCON Project
+2025-07-31 14:53:08.641 [main] INFO  com.example.Main - Configuration loaded successfully
+2025-07-31 14:53:08.812 [main] INFO  com.example.RconClient - Connected to RCON server voidrunner.zapto.org:25575
+2025-07-31 14:53:08.828 [main] DEBUG com.example.RconClient - Reading packet of size: 10
+2025-07-31 14:53:08.829 [main] INFO  com.example.RconClient - Successfully authenticated with RCON server
+2025-07-31 14:53:08.829 [main] INFO  com.example.Main - Successfully connected to server
+2025-07-31 14:53:08.832 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:53:13.891 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:53:18.966 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:53:23.982 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:53:29.026 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:53:34.052 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:53:39.084 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:53:44.182 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:53:49.215 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:53:54.235 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:53:59.252 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:54:04.263 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:54:09.279 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:54:14.293 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:54:19.309 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:54:24.318 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:54:29.337 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:54:34.354 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:54:40.809 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:54:45.830 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:54:50.847 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:54:55.862 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:55:00.900 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:55:05.956 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:55:10.978 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:55:16.004 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:55:21.023 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:55:26.056 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 14:55:26.149 [main] DEBUG com.example.RconClient - Reading packet of size: 111
+2025-07-31 14:55:26.209 [main] DEBUG com.example.RconClient - Reading packet of size: 102
+2025-07-31 14:55:31.226 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 14:55:31.232 [main] DEBUG com.example.RconClient - Reading packet of size: 111
+2025-07-31 14:55:31.239 [main] DEBUG com.example.RconClient - Reading packet of size: 102
+2025-07-31 14:55:36.248 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 14:55:36.259 [main] DEBUG com.example.RconClient - Reading packet of size: 111
+2025-07-31 14:55:36.268 [main] DEBUG com.example.RconClient - Reading packet of size: 102
+2025-07-31 14:55:41.282 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 14:55:41.287 [main] DEBUG com.example.RconClient - Reading packet of size: 111
+2025-07-31 14:55:41.295 [main] DEBUG com.example.RconClient - Reading packet of size: 102
+2025-07-31 14:55:46.310 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 14:55:46.318 [main] DEBUG com.example.RconClient - Reading packet of size: 111
+2025-07-31 14:55:46.324 [main] DEBUG com.example.RconClient - Reading packet of size: 102
+2025-07-31 14:55:51.334 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 14:55:51.342 [main] DEBUG com.example.RconClient - Reading packet of size: 111
+2025-07-31 14:55:51.350 [main] DEBUG com.example.RconClient - Reading packet of size: 102
+2025-07-31 14:55:56.370 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 14:55:56.377 [main] DEBUG com.example.RconClient - Reading packet of size: 111
+2025-07-31 14:55:56.386 [main] DEBUG com.example.RconClient - Reading packet of size: 102
+2025-07-31 14:56:01.402 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 14:56:01.412 [main] DEBUG com.example.RconClient - Reading packet of size: 111
+2025-07-31 14:56:01.422 [main] DEBUG com.example.RconClient - Reading packet of size: 102
+2025-07-31 14:56:06.436 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 14:56:06.444 [main] DEBUG com.example.RconClient - Reading packet of size: 111
+2025-07-31 14:56:06.452 [main] DEBUG com.example.RconClient - Reading packet of size: 102
+2025-07-31 14:56:11.467 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:56:16.498 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:56:21.662 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:56:26.714 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:56:31.728 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:56:36.776 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:56:41.849 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:56:46.924 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:56:51.976 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:56:57.258 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:57:02.303 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:57:07.327 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:57:12.384 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:57:17.422 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:57:22.490 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:57:27.540 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:57:32.573 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:57:37.579 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:57:42.638 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:57:47.655 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:57:52.705 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:57:57.766 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:58:02.812 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 14:58:07.824 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:01:32.427 [main] INFO  com.example.Main - Starting Java RCON Project
+2025-07-31 15:01:32.433 [main] INFO  com.example.Main - Configuration loaded successfully
+2025-07-31 15:01:32.527 [main] INFO  com.example.RconClient - Connected to RCON server voidrunner.zapto.org:25575
+2025-07-31 15:01:32.536 [main] DEBUG com.example.RconClient - Reading packet of size: 10
+2025-07-31 15:01:32.538 [main] INFO  com.example.RconClient - Successfully authenticated with RCON server
+2025-07-31 15:01:32.539 [main] INFO  com.example.Main - Successfully connected to server
+2025-07-31 15:01:32.545 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:01:37.594 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:01:42.633 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:01:47.652 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:01:52.675 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:01:57.718 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:02:02.731 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:02:07.770 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:02:12.799 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:02:17.820 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:02:22.840 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:02:27.852 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:02:32.866 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:02:37.876 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:02:42.893 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:02:47.906 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:02:52.951 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:02:57.985 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:03:03.056 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:03:08.073 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:03:13.097 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:03:18.121 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:03:23.138 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:03:28.160 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 15:03:28.169 [main] DEBUG com.example.RconClient - Reading packet of size: 102
+2025-07-31 15:03:28.180 [main] DEBUG com.example.RconClient - Reading packet of size: 102
+2025-07-31 15:03:28.239 [main] DEBUG com.example.RconClient - Reading packet of size: 102
+2025-07-31 15:03:28.278 [main] DEBUG com.example.RconClient - Reading packet of size: 40
+2025-07-31 15:03:28.293 [main] DEBUG com.example.RconClient - Reading packet of size: 41
+2025-07-31 15:03:28.301 [main] DEBUG com.example.RconClient - Reading packet of size: 41
+2025-07-31 15:03:28.310 [main] DEBUG com.example.RconClient - Reading packet of size: 40
+2025-07-31 15:03:28.321 [main] DEBUG com.example.RconClient - Reading packet of size: 41
+2025-07-31 15:03:28.330 [main] DEBUG com.example.RconClient - Reading packet of size: 40
+2025-07-31 15:03:28.344 [main] DEBUG com.example.RconClient - Reading packet of size: 87
+2025-07-31 15:03:33.364 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 15:03:33.370 [main] DEBUG com.example.RconClient - Reading packet of size: 102
+2025-07-31 15:03:33.380 [main] DEBUG com.example.RconClient - Reading packet of size: 102
+2025-07-31 15:03:38.398 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 15:03:38.404 [main] DEBUG com.example.RconClient - Reading packet of size: 102
+2025-07-31 15:03:38.412 [main] DEBUG com.example.RconClient - Reading packet of size: 102
+2025-07-31 15:03:43.423 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 15:03:43.434 [main] DEBUG com.example.RconClient - Reading packet of size: 102
+2025-07-31 15:03:43.441 [main] DEBUG com.example.RconClient - Reading packet of size: 102
+2025-07-31 15:03:48.468 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 15:03:48.476 [main] DEBUG com.example.RconClient - Reading packet of size: 102
+2025-07-31 15:03:48.482 [main] DEBUG com.example.RconClient - Reading packet of size: 102
+2025-07-31 15:03:53.497 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 15:03:53.504 [main] DEBUG com.example.RconClient - Reading packet of size: 102
+2025-07-31 15:03:53.511 [main] DEBUG com.example.RconClient - Reading packet of size: 102
+2025-07-31 15:03:58.523 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 15:03:58.530 [main] DEBUG com.example.RconClient - Reading packet of size: 113
+2025-07-31 15:03:58.538 [main] DEBUG com.example.RconClient - Reading packet of size: 113
+2025-07-31 15:04:03.554 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 15:04:03.561 [main] DEBUG com.example.RconClient - Reading packet of size: 114
+2025-07-31 15:04:03.571 [main] DEBUG com.example.RconClient - Reading packet of size: 114
+2025-07-31 15:04:08.588 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 15:04:08.598 [main] DEBUG com.example.RconClient - Reading packet of size: 113
+2025-07-31 15:04:08.608 [main] DEBUG com.example.RconClient - Reading packet of size: 113
+2025-07-31 15:04:13.628 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 15:04:13.635 [main] DEBUG com.example.RconClient - Reading packet of size: 101
+2025-07-31 15:04:13.642 [main] DEBUG com.example.RconClient - Reading packet of size: 101
+2025-07-31 15:04:18.648 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 15:04:18.655 [main] DEBUG com.example.RconClient - Reading packet of size: 101
+2025-07-31 15:04:18.670 [main] DEBUG com.example.RconClient - Reading packet of size: 101
+2025-07-31 15:04:23.689 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 15:04:23.696 [main] DEBUG com.example.RconClient - Reading packet of size: 101
+2025-07-31 15:04:23.703 [main] DEBUG com.example.RconClient - Reading packet of size: 101
+2025-07-31 15:04:28.729 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:04:33.740 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 15:04:33.748 [main] DEBUG com.example.RconClient - Reading packet of size: 101
+2025-07-31 15:04:33.763 [main] DEBUG com.example.RconClient - Reading packet of size: 101
+2025-07-31 15:04:38.779 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 15:04:38.785 [main] DEBUG com.example.RconClient - Reading packet of size: 114
+2025-07-31 15:04:38.791 [main] DEBUG com.example.RconClient - Reading packet of size: 114
+2025-07-31 15:04:43.805 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 15:04:43.811 [main] DEBUG com.example.RconClient - Reading packet of size: 114
+2025-07-31 15:04:43.821 [main] DEBUG com.example.RconClient - Reading packet of size: 114
+2025-07-31 15:04:48.839 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 15:04:48.858 [main] DEBUG com.example.RconClient - Reading packet of size: 112
+2025-07-31 15:04:48.891 [main] DEBUG com.example.RconClient - Reading packet of size: 112
+2025-07-31 15:04:53.909 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 15:04:53.922 [main] DEBUG com.example.RconClient - Reading packet of size: 114
+2025-07-31 15:04:53.928 [main] DEBUG com.example.RconClient - Reading packet of size: 114
+2025-07-31 15:04:58.947 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 15:04:58.953 [main] DEBUG com.example.RconClient - Reading packet of size: 114
+2025-07-31 15:04:58.959 [main] DEBUG com.example.RconClient - Reading packet of size: 114
+2025-07-31 15:05:03.975 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 15:05:03.984 [main] DEBUG com.example.RconClient - Reading packet of size: 100
+2025-07-31 15:05:03.989 [main] DEBUG com.example.RconClient - Reading packet of size: 100
+2025-07-31 15:05:09.006 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 15:05:09.011 [main] DEBUG com.example.RconClient - Reading packet of size: 113
+2025-07-31 15:05:09.038 [main] DEBUG com.example.RconClient - Reading packet of size: 113
+2025-07-31 15:05:14.050 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 15:05:14.060 [main] DEBUG com.example.RconClient - Reading packet of size: 100
+2025-07-31 15:05:14.072 [main] DEBUG com.example.RconClient - Reading packet of size: 100
+2025-07-31 15:05:19.085 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 15:05:19.091 [main] DEBUG com.example.RconClient - Reading packet of size: 99
+2025-07-31 15:05:19.097 [main] DEBUG com.example.RconClient - Reading packet of size: 99
+2025-07-31 15:05:24.123 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 15:05:24.129 [main] DEBUG com.example.RconClient - Reading packet of size: 99
+2025-07-31 15:05:24.137 [main] DEBUG com.example.RconClient - Reading packet of size: 99
+2025-07-31 15:05:29.146 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 15:05:29.153 [main] DEBUG com.example.RconClient - Reading packet of size: 99
+2025-07-31 15:05:29.159 [main] DEBUG com.example.RconClient - Reading packet of size: 99
+2025-07-31 15:05:34.172 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 15:05:34.178 [main] DEBUG com.example.RconClient - Reading packet of size: 99
+2025-07-31 15:05:34.184 [main] DEBUG com.example.RconClient - Reading packet of size: 99
+2025-07-31 15:05:39.192 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 15:05:39.198 [main] DEBUG com.example.RconClient - Reading packet of size: 100
+2025-07-31 15:05:39.204 [main] DEBUG com.example.RconClient - Reading packet of size: 100
+2025-07-31 15:05:44.223 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 15:05:44.231 [main] DEBUG com.example.RconClient - Reading packet of size: 100
+2025-07-31 15:05:44.238 [main] DEBUG com.example.RconClient - Reading packet of size: 100
+2025-07-31 15:05:49.258 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 15:05:49.266 [main] DEBUG com.example.RconClient - Reading packet of size: 99
+2025-07-31 15:05:49.275 [main] DEBUG com.example.RconClient - Reading packet of size: 99
+2025-07-31 15:05:54.288 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 15:05:54.293 [main] DEBUG com.example.RconClient - Reading packet of size: 99
+2025-07-31 15:05:54.303 [main] DEBUG com.example.RconClient - Reading packet of size: 99
+2025-07-31 15:05:59.325 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 15:05:59.332 [main] DEBUG com.example.RconClient - Reading packet of size: 116
+2025-07-31 15:05:59.338 [main] DEBUG com.example.RconClient - Reading packet of size: 116
+2025-07-31 15:06:04.352 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 15:06:04.358 [main] DEBUG com.example.RconClient - Reading packet of size: 115
+2025-07-31 15:06:04.366 [main] DEBUG com.example.RconClient - Reading packet of size: 115
+2025-07-31 15:06:09.467 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 15:06:09.475 [main] DEBUG com.example.RconClient - Reading packet of size: 100
+2025-07-31 15:06:09.546 [main] DEBUG com.example.RconClient - Reading packet of size: 100
+2025-07-31 15:06:14.583 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 15:06:14.589 [main] DEBUG com.example.RconClient - Reading packet of size: 112
+2025-07-31 15:06:14.597 [main] DEBUG com.example.RconClient - Reading packet of size: 112
+2025-07-31 15:06:19.617 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 15:06:19.622 [main] DEBUG com.example.RconClient - Reading packet of size: 99
+2025-07-31 15:06:19.629 [main] DEBUG com.example.RconClient - Reading packet of size: 99
+2025-07-31 15:06:24.649 [main] DEBUG com.example.RconClient - Reading packet of size: 63
+2025-07-31 15:06:24.654 [main] DEBUG com.example.RconClient - Reading packet of size: 100
+2025-07-31 15:06:24.661 [main] DEBUG com.example.RconClient - Reading packet of size: 100
+2025-07-31 15:06:29.672 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:06:34.687 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:06:39.710 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:06:44.722 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:06:49.759 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:06:54.775 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:06:59.798 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:07:04.808 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:07:09.836 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:07:14.857 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:07:19.878 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:07:24.899 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:07:29.912 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:07:34.928 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:07:39.961 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:07:44.992 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:07:50.036 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:07:55.057 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:08:00.085 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:08:05.123 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:08:10.162 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:08:15.216 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:08:20.237 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:08:25.270 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:08:30.316 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:08:35.343 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:08:40.391 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:08:45.532 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:08:50.552 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:08:55.584 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:09:00.619 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:09:05.652 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:09:10.666 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:09:15.679 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:09:20.708 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:09:25.731 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:09:30.746 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:09:35.755 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:09:40.774 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:09:45.849 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:09:50.922 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:09:55.948 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:10:01.003 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:10:06.020 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:10:11.130 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:10:16.155 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:10:21.199 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:10:26.223 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:10:31.239 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:10:36.271 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:10:41.351 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:10:46.471 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:10:51.591 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:10:56.613 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:11:01.649 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:11:06.666 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:11:11.704 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:11:16.726 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:11:21.765 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:11:26.834 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:11:31.938 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:11:37.070 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:11:42.224 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:11:47.255 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:11:52.318 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:11:57.339 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:12:02.379 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:12:07.470 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:14:04.431 [main] INFO  com.example.Main - Starting Java RCON Project
+2025-07-31 15:14:04.437 [main] INFO  com.example.Main - Configuration loaded successfully
+2025-07-31 15:14:04.522 [main] INFO  com.example.RconClient - Connected to RCON server voidrunner.zapto.org:25575
+2025-07-31 15:14:04.527 [main] DEBUG com.example.RconClient - Reading packet of size: 10
+2025-07-31 15:14:04.527 [main] INFO  com.example.RconClient - Successfully authenticated with RCON server
+2025-07-31 15:14:04.527 [main] INFO  com.example.Main - Successfully connected to server
+2025-07-31 15:14:04.535 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:14:09.569 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:14:14.590 [main] DEBUG com.example.RconClient - Reading packet of size: 53
+2025-07-31 15:14:19.598 [main] DEBUG com.example.RconClient - Reading packet of size: 53

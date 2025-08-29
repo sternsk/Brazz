@@ -1,0 +1,419 @@
+package com.example;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
+/**
+ * Main class for the Java RCON project.
+ * This demonstrates connecting to a server and querying active players.
+ */
+public class Main {
+    
+    private static final Logger logger = LoggerFactory.getLogger(Main.class);
+    
+    public static void main(String[] args) {
+        logger.info("Starting Java RCON Project");
+        
+        // Load configuration
+        Properties config = loadConfiguration();
+        String serverHost = config.getProperty("server.host", "voidrunner.zapto.org");
+        int serverPort = Integer.parseInt(config.getProperty("server.port", "25575"));
+        String rconPassword = config.getProperty("server.rcon.password", "password");
+        
+        System.out.println("Connecting to server: " + serverHost + ":" + serverPort);
+        
+        // Check if password is set
+        if ("your_rcon_password_here".equals(rconPassword)) {
+            System.out.println("WARNING: Please set the RCON password in src/main/resources/application.properties");
+            System.out.println("Current password is the default placeholder value.");
+            return;
+        }
+        
+        // Create RCON client
+        RconClient rconClient = new RconClient(serverHost, serverPort, rconPassword);
+        
+        try {
+            // Connect to the server
+            if (rconClient.connect()) {
+                logger.info("Successfully connected to server");
+                System.out.println("Connected to server successfully!");
+                System.out.println("Starting player monitoring (checking every 5 seconds)...");
+                System.out.println("Press Ctrl+C to stop monitoring");
+                
+                // Define the height threshold to trigger sphere creation
+                final int TRIGGER_HEIGHT = 80; // Create sphere when player reaches Y=80
+                final int SPHERE_RADIUS = 5;   // Radius of the sphere
+                
+                System.out.println("Monitoring for players reaching height Y=" + TRIGGER_HEIGHT);
+                                 System.out.println("Will create a winding path beneath the player to the ground level");
+                
+                // Track which players have already triggered sphere creation
+                java.util.Set<String> playersWithSpheres = new java.util.HashSet<>();
+                
+                // Continuous monitoring loop
+                while (true) {
+                    try {
+                        // Check for players
+                        String playerList = rconClient.sendCommand("list");
+                        System.out.println("\n[" + java.time.LocalTime.now() + "] Checking players...");
+                        System.out.println("Player list: " + playerList);
+                        
+                        // Parse player count from response
+                        if (playerList.contains("There are") && !playerList.contains("0 of")) {
+                            // Players are online, get their locations
+                            System.out.println("Players detected! Getting locations...");
+                            
+                            // Get player positions
+                            String positions = rconClient.sendCommand("execute as @a run data get entity @s Pos");
+                            System.out.println("Player positions: " + positions);
+                            
+                            // Parse player names from the list
+                            String[] lines = playerList.split("\n");
+                            for (String line : lines) {
+                                if (line.contains(":")) {
+                                    String[] parts = line.split(":");
+                                    if (parts.length > 1) {
+                                        String playerNames = parts[1].trim();
+                                        if (!playerNames.isEmpty()) {
+                                            String[] players = playerNames.split(",");
+                                                                                         for (String player : players) {
+                                                 player = player.trim();
+                                                 if (!player.isEmpty()) {
+                                                     System.out.println("Checking player: " + player);
+                                                     
+                                                     // Check if player has reached the trigger height
+                                                     if (hasPlayerReachedHeight(rconClient, player, TRIGGER_HEIGHT)) {
+                                                         
+                                                         System.out.println("🎯 PLAYER " + player + " REACHED HEIGHT " + TRIGGER_HEIGHT + "!");
+                                                         
+                                                                                                                   // Check if we haven't created a path for this player yet
+                                                          if (!playersWithSpheres.contains(player)) {
+                                                              System.out.println("🛤️ Creating winding path beneath " + player + "...");
+                                                              
+                                                              // Create a winding path beneath the player to the ground
+                                                              boolean pathCreated = createWindingPathBeneathPlayer(rconClient, player);
+                                                             
+                                                                                                                           if (pathCreated) {
+                                                                  System.out.println("✅ Winding path created successfully for " + player);
+                                                                  playersWithSpheres.add(player);
+                                                              } else {
+                                                                  System.out.println("❌ Failed to create winding path for " + player);
+                                                              }
+                                                                                                                   } else {
+                                                              System.out.println("ℹ️ Winding path already created for " + player);
+                                                          }
+                                                     } else {
+                                                         System.out.println("📏 " + player + " has not reached trigger height yet");
+                                                     }
+                                                 }
+                                             }
+                                        }
+                                    }
+                                }
+                            }
+                            
+                        } else {
+                            System.out.println("No players online currently.");
+                        }
+                        
+                        // Wait 5 seconds before next check
+                        Thread.sleep(5000);
+                        
+                    } catch (InterruptedException e) {
+                        System.out.println("Monitoring interrupted.");
+                        break;
+                    } catch (Exception e) {
+                        logger.error("Error during monitoring: {}", e.getMessage());
+                        System.out.println("Error during monitoring: " + e.getMessage());
+                        // Continue monitoring even if there's an error
+                        Thread.sleep(5000);
+                    }
+                }
+                
+            } else {
+                logger.error("Failed to connect to server");
+                System.out.println("Failed to connect to server. Please check:");
+                System.out.println("1. Server is running and accessible");
+                System.out.println("2. RCON password is correct");
+                System.out.println("3. RCON is enabled on the server");
+            }
+            
+        } catch (Exception e) {
+            logger.error("Error during RCON communication: {}", e.getMessage(), e);
+            System.out.println("Error: " + e.getMessage());
+        } finally {
+            // Always disconnect
+            rconClient.disconnect();
+            logger.info("Disconnected from server");
+        }
+    }
+    
+    /**
+     * Load configuration from application.properties
+     */
+    private static Properties loadConfiguration() {
+        Properties properties = new Properties();
+        try (InputStream input = Main.class.getClassLoader().getResourceAsStream("application.properties")) {
+            if (input != null) {
+                properties.load(input);
+                logger.info("Configuration loaded successfully");
+            } else {
+                logger.warn("Configuration file not found, using defaults");
+            }
+        } catch (IOException e) {
+            logger.error("Error loading configuration: {}", e.getMessage());
+        }
+        return properties;
+    }
+    
+    /**
+     * Check if a player has reached the specified height
+     */
+    private static boolean hasPlayerReachedHeight(RconClient rconClient, String playerName, int targetHeight) {
+        try {
+            // Get player's position
+            String command = "execute as " + playerName + " run data get entity @s Pos";
+            String response = rconClient.sendCommand(command);
+            
+            System.out.println("Position data for " + playerName + ": " + response);
+            
+            // Parse the position from response
+            if (response.contains("[")) {
+                String posPart = response.substring(response.indexOf("["));
+                String[] coords = posPart.replaceAll("[\\[\\]d]", "").split(",");
+                
+                if (coords.length >= 3) {
+                    double x = Double.parseDouble(coords[0].trim());
+                    double y = Double.parseDouble(coords[1].trim());
+                    double z = Double.parseDouble(coords[2].trim());
+                    
+                    System.out.println("Player " + playerName + " position: X=" + x + ", Y=" + y + ", Z=" + z);
+                    
+                    // Check if player has reached the target height
+                    boolean reachedHeight = (y >= targetHeight);
+                    
+                    return reachedHeight;
+                }
+            }
+            
+            return false;
+        } catch (Exception e) {
+            logger.error("Error checking player height: {}", e.getMessage());
+            return false;
+        }
+    }
+    
+         /**
+      * Create a winding path beneath the player to the ground level
+      */
+     private static boolean createWindingPathBeneathPlayer(RconClient rconClient, String playerName) {
+                 try {
+             System.out.println("🛤️ Starting winding path creation for " + playerName);
+             
+             // Get player's position
+             String posCommand = "execute as " + playerName + " run data get entity @s Pos";
+             String posResponse = rconClient.sendCommand(posCommand);
+             
+             if (!posResponse.contains("[")) {
+                 System.out.println("❌ Could not get player position");
+                 return false;
+             }
+             
+             // Parse position
+             String posPart = posResponse.substring(posResponse.indexOf("["));
+             String[] posCoords = posPart.replaceAll("[\\[\\]d]", "").split(",");
+             
+             if (posCoords.length < 3) {
+                 System.out.println("❌ Invalid position data");
+                 return false;
+             }
+             
+             double playerX = Double.parseDouble(posCoords[0].trim());
+             double playerY = Double.parseDouble(posCoords[1].trim());
+             double playerZ = Double.parseDouble(posCoords[2].trim());
+             
+             System.out.println("Player " + playerName + " position: X=" + playerX + ", Y=" + playerY + ", Z=" + playerZ);
+             
+             // Find the actual ground level at the player's location
+             double groundLevel = findGroundLevel(rconClient, (int)playerX, (int)playerZ);
+             
+             System.out.println("📍 Creating winding path from Y=" + (int)playerY + " to ground level Y=" + (int)groundLevel);
+             
+             // Create winding path parameters
+             int pathRadius = 3; // Radius of the spiral
+             int stepHeight = 1; // Height difference between steps
+             double angleStep = Math.PI / 4; // 45 degrees per step
+             
+             boolean success = true;
+             int currentY = (int) playerY - 1; // Start one block below player
+             double currentAngle = 0;
+             int stepCount = 0;
+             
+             // Create spiral staircase down to ground level
+             while (currentY > groundLevel && stepCount < 100) { // Safety limit
+                 // Calculate position on the spiral
+                 double offsetX = Math.cos(currentAngle) * pathRadius;
+                 double offsetZ = Math.sin(currentAngle) * pathRadius;
+                 
+                 int pathX = (int) (playerX + offsetX);
+                 int pathZ = (int) (playerZ + offsetZ);
+                 
+                 // Create the step (platform)
+                 for (int x = -1; x <= 1; x++) {
+                     for (int z = -1; z <= 1; z++) {
+                         int blockX = pathX + x;
+                         int blockZ = pathZ + z;
+                         
+                         // Use different materials for visual effect
+                         String material = "stone_bricks";
+                         if (stepCount % 4 == 0) {
+                             material = "quartz_block";
+                         } else if (stepCount % 4 == 1) {
+                             material = "dark_oak_planks";
+                         } else if (stepCount % 4 == 2) {
+                             material = "birch_planks";
+                         }
+                         
+                         String setBlockCommand = "setblock " + blockX + " " + currentY + " " + blockZ + " " + material;
+                         String response = rconClient.sendCommand(setBlockCommand);
+                         
+                         if (response.contains("error") || response.contains("Error")) {
+                             System.out.println("Warning: Failed to set block at " + blockX + "," + currentY + "," + blockZ);
+                         }
+                     }
+                 }
+                 
+                 // Add railing on the outer edge
+                 double outerAngle = currentAngle + Math.PI / 8; // Slightly offset for railing
+                 double railingX = Math.cos(outerAngle) * (pathRadius + 1);
+                 double railingZ = Math.sin(outerAngle) * (pathRadius + 1);
+                 
+                 int railingBlockX = (int) (playerX + railingX);
+                 int railingBlockZ = (int) (playerZ + railingZ);
+                 
+                 // Create railing posts
+                 for (int railY = currentY; railY <= currentY + 2; railY++) {
+                     String railingCommand = "setblock " + railingBlockX + " " + railY + " " + railingBlockZ + " oak_fence";
+                     String railingResponse = rconClient.sendCommand(railingCommand);
+                     
+                     if (railingResponse.contains("error") || railingResponse.contains("Error")) {
+                         System.out.println("Warning: Failed to set railing at " + railingBlockX + "," + railY + "," + railingBlockZ);
+                     }
+                 }
+                 
+                 // Add some decorative lighting
+                 if (stepCount % 3 == 0) {
+                     String lightCommand = "setblock " + pathX + " " + (currentY + 1) + " " + pathZ + " lantern";
+                     String lightResponse = rconClient.sendCommand(lightCommand);
+                     
+                     if (lightResponse.contains("error") || lightResponse.contains("Error")) {
+                         // Fallback to torch if lantern fails
+                         String torchCommand = "setblock " + pathX + " " + (currentY + 1) + " " + pathZ + " torch";
+                         rconClient.sendCommand(torchCommand);
+                     }
+                 }
+                 
+                 // Move to next step
+                 currentY -= stepHeight;
+                 currentAngle += angleStep;
+                 stepCount++;
+                 
+                 // Add a small delay to prevent overwhelming the server
+                 Thread.sleep(50);
+             }
+             
+             // Create a landing platform at the bottom
+             for (int x = -2; x <= 2; x++) {
+                 for (int z = -2; z <= 2; z++) {
+                     int landingX = (int) playerX + x;
+                     int landingZ = (int) playerZ + z;
+                     
+                     String landingCommand = "setblock " + landingX + " " + (int)groundLevel + " " + landingZ + " polished_granite";
+                     String landingResponse = rconClient.sendCommand(landingCommand);
+                     
+                     if (landingResponse.contains("error") || landingResponse.contains("Error")) {
+                         System.out.println("Warning: Failed to set landing block at " + landingX + "," + (int)groundLevel + "," + landingZ);
+                     }
+                 }
+             }
+             
+             // Add a decorative centerpiece at the landing
+             String centerCommand = "setblock " + (int)playerX + " " + ((int)groundLevel + 1) + " " + (int)playerZ + " beacon";
+             String centerResponse = rconClient.sendCommand(centerCommand);
+             
+             if (centerResponse.contains("error") || centerResponse.contains("Error")) {
+                 // Fallback to a different decorative block
+                 String fallbackCommand = "setblock " + (int)playerX + " " + ((int)groundLevel + 1) + " " + (int)playerZ + " diamond_block";
+                 rconClient.sendCommand(fallbackCommand);
+             }
+             
+             // Notify the player
+             String notifyCommand = "tell " + playerName + " A magical winding path has appeared beneath you! Follow it down!";
+             String notifyResponse = rconClient.sendCommand(notifyCommand);
+             System.out.println("Notify response: " + notifyResponse);
+             
+             // Add particle effects along the path
+             for (int i = 0; i < 5; i++) {
+                 double particleAngle = i * Math.PI / 2;
+                 double particleX = Math.cos(particleAngle) * pathRadius;
+                 double particleZ = Math.sin(particleAngle) * pathRadius;
+                 
+                 String particleCommand = "particle minecraft:end_rod " + 
+                     ((int)playerX + (int)particleX) + " " + ((int)playerY - 2) + " " + 
+                     ((int)playerZ + (int)particleZ) + " 1 1 1 0.1 20";
+                 String particleResponse = rconClient.sendCommand(particleCommand);
+                 System.out.println("Particle response: " + particleResponse);
+                 
+                 Thread.sleep(100);
+             }
+             
+             return success;
+             
+         } catch (Exception e) {
+             logger.error("Error creating winding path: {}", e.getMessage());
+             return false;
+         }
+     }
+     
+          /**
+      * Find the actual ground level at the specified coordinates
+      */
+     private static double findGroundLevel(RconClient rconClient, int x, int z) {
+         try {
+             System.out.println("🔍 Finding ground level at X=" + x + ", Z=" + z);
+             
+             // Since we know sea level is at Y=60, let's check around that area
+             // Look for the first solid block from Y=70 down to Y=55
+             int startY = 70;
+             int endY = 55;
+             
+             for (int y = startY; y >= endY; y--) {
+                 // Try to get block data at this Y level
+                 String command = "data get block " + x + " " + y + " " + z;
+                 String response = rconClient.sendCommand(command);
+                 
+                 // If we get a valid response (not an error), this might be a solid block
+                 if (!response.contains("error") && !response.contains("Error") && !response.contains("Unknown")) {
+                     // Check if it's not air
+                     if (!response.contains("air") && !response.contains("cave_air")) {
+                         System.out.println("📍 Ground level found at Y=" + y + " (block data: " + response + ")");
+                         return y;
+                     }
+                 }
+             }
+             
+             // If we reach here, default to Y=60 (sea level)
+             System.out.println("⚠️ Could not find ground level, defaulting to Y=60 (sea level)");
+             return 60;
+             
+         } catch (Exception e) {
+             logger.error("Error finding ground level: {}", e.getMessage());
+             // Default to sea level if detection fails
+             return 60;
+         }
+     }
+} 
