@@ -1,0 +1,9 @@
+*.hprof
+./gradle
+./gradle\wrapper
+./logs
+build.gradle
+gradlew
+gradlew.bat
+README.md
+settings.gradle
