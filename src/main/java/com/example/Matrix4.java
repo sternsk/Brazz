@@ -10,6 +10,27 @@ class Matrix4 {
         for (int i=0;i<4;i++) m[i][i] = 1;
         return this;
     }
+    /*
+    void setIdentity() {
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                m[i][j] = (i == j) ? 1.0 : 0.0;
+            }
+        }
+    }
+    */
+
+    double getRotationY(){
+        // Annahme: Matrix ist reine Rotation oder Rotation+Translation, keine Scherung
+        return Math.atan2(m[0][2], m[0][0]);
+    }
+    double[] getTranslation(){
+        double[] d = new double[3];
+        for (int i=0; i<3; i++){
+            d[i] = m[i][3];
+        }
+        return d;
+    }
 
     Matrix4 multiply(Matrix4 other) {
         double[][] r = new double[4][4];
@@ -18,6 +39,45 @@ class Matrix4 {
                 for (int k=0;k<4;k++)
                     r[i][j] += m[i][k] * other.m[k][j];
         m = r;
+        return this;
+    }
+
+    public void setRotationX(double angle) {
+        double c = Math.cos(angle);
+        double s = Math.sin(angle);
+        
+        m[1][1] = c;
+        m[1][2] = -s;
+        m[2][1] = s;
+        m[2][2] = c;
+    }
+
+    public void setRotationY(double angle) {
+        double c = Math.cos(angle);
+        double s = Math.sin(angle);
+        
+        m[0][0] = c;
+        m[0][2] = s;
+        m[2][0] = -s;
+        m[2][2] = c;
+    }
+
+    public void setRotationZ(double angle) {
+        double c = Math.cos(angle);
+        double s = Math.sin(angle);
+        
+        m[0][0] = c;
+        m[0][1] = -s;
+        m[1][0] = s;
+        m[1][1] = c;
+    }
+
+    Matrix4 setTranslation(double x, double y, double z){
+        Matrix4 t = new Matrix4();
+        t.m[0][3] = x;
+        t.m[1][3] = y;
+        t.m[2][3] = z;
+        m = t.m;
         return this;
     }
 

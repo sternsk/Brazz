@@ -1,5 +1,5 @@
 *.hprof
-./gradle
+./gradle/
 ./gradle\wrapper
 ./logs
 build.gradle

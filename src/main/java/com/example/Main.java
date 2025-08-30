@@ -48,13 +48,17 @@ public class Main {
                 logger.info("Successfully connected to server");
                 
                 // do Somethin
-                Matrix4 base = new Matrix4();
-                base.rotateX(Math.PI/2);
                 int height = 16;
                 int width = 24;
-
+                
                 int startX = 1300; 
-                int startZ = -1928; 
+                int startY = 70;
+                int startZ = -1040; 
+                
+                Matrix4 base = new Matrix4();
+                base.translate(startX, startY, startZ);
+                base.rotateX(Math.PI/2);
+
 
                 String command = "forceload add "+startX+" "+startZ+" "+(startX+width*11)+" "+(startZ+height*11);
                 String response = rconClient.sendCommand(command);
@@ -63,12 +67,19 @@ public class Main {
                 System.out.println("StartX: "+startX+" StartZ: " + startZ + 
                                     " startX+width*11: "+startX+width*11 + " startZ+height*11"+startZ+height*11);
 
-                for (int col = 1; col <= 10; col++){
+                for (int col = 1; col <= 1; col++){
+                   
                     for(int row = 1; row <= 10; row++){
-                        Complex c = new CardioidToRect().toCardioid(new Complex((double)(col)/10,(double)(row)/10));
-                        jool(1300 + row*width, 120, -2100 + col*height, width, height, c, base, rconClient);
-                        base.rotateY(Math.PI/16*(Math.sin((double)(row)/5*Math.PI)));
+                        Complex c = new CardioidToRect().toCardioid(new Complex(1,(double)(row)/10));
+                        jool(0, 0, 0, width, height, c, base, rconClient);
+                        base.translate(width, 0, 0);
+                        base.setRotationY(Math.sin(Math.PI*(double)(row)/5));
+                        //if(col == 1) System.out.println("row: "+row+", angle: "+Math.sin(Math.PI*(double)(row)/2.5));
+                        
                     }
+                    base.rotateX(-Math.PI/2);
+                    base.setTranslation(startX, startY, startZ+height*col);
+                    base.rotateX(Math.PI/2);
                 }
  
                 /*
@@ -231,15 +242,13 @@ public class Main {
                 double wz = base.m[2][0] + base.m[2][1] + base.m[2][2] + base.m[2][2];
                 //System.out.println("center[2]: "+center[2] +", b.u[2]" +b.u[2]+", b.v[2]:"+b.v[2]+", wz:"+wz);
  */                
-                int blockX = iround(pixel.v[0]) + startX;
-                int blockY = iround(pixel.v[1]) + startY;
-                int blockZ = iround(pixel.v[2]) + startZ;
+                int blockX = iround(pixel.v[0]);
+                int blockY = iround(pixel.v[1]);
+                int blockZ = iround(pixel.v[2]);
                 
-                if (inside) {material = " minecraft:blue_concrete";}
-                else if(escapeTime == 0) {material = " air";}
-                else {
-                    material = " minecraft:white_concrete";
-                }
+                if (inside) {material = " minecraft:blue_stained_glass";}
+                else if(escapeTime == 0) {material = " minecraft:blue_stained_glass";}
+                else {material = " minecraft:brown_concrete";}
                 command = "setblock "+blockX+" "+blockY+" "+blockZ + material;
                 response = rconClient.sendCommand(command);
                 System.out.println(response);
